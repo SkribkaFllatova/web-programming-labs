@@ -10,6 +10,14 @@ header {
     color: lightgreen; 
     padding: 15px; 
     font-size: 16pt;
+    transition: 900ms;
+}
+header:hover {
+    background: linear-gradient(to right , black, blue);
+    color: red;
+    padding: 10px;
+    font-size: 16px;
+    transition: 600ms;
 }
 
 footer {
@@ -19,6 +27,15 @@ footer {
     font-size: 16pt; 
     font-style: italic; 
     text-align: right;
+    transition: 900ms;
+}
+
+footer:hover {
+    background: linear-gradient(to right , red, black);
+    color: blue;
+    padding: 10px;
+    font-size: 16px;
+    transition: 600ms;
 }
 
 a {
