@@ -45,6 +45,21 @@
             margin-left: 2cm;
             text-indent: 0;
         }
+        .shadow {
+            text-shadow: 5px 5px 2px gray;
+        }
+        .shadow_blue {
+            text-shadow: -5px 5px 2px blue;
+        }
+        .shadow_blue1 {
+            text-shadow: 0 0 3px blue;
+        }
+        .razmazka {
+            transition: 600ms 500ms;
+        }
+        .razmazka:hover {
+            text-shadow: 5px 5px 2px greenyellow;
+        }
     </style>
 </head>
 <body>
@@ -54,7 +69,7 @@
 
     <main>
         <h1>
-        Расчет (формула)
+        <div class="razmazka">Расчет (формула)</div>
         </h1>
 
         <div>
@@ -108,8 +123,13 @@
         </div>
 
         <div class="formula">
-        Чистые активы = стр.1300 - ЗУ + ДБП</main>
+        Чистые активы = стр.1300 - ЗУ + ДБП
         </div>
+
+    <div class="shadow">Тень</div>
+    <div class="shadow_blue">Синяя тень слева снизу</div>
+    <div class="shadow_blue1">Синее размытие</div>
+    </main>
     <footer>
         <header>
         &copy; Скрибка Владислав, Филатова Юлия, ФБИ-11, 2 курс, 2023
