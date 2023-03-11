@@ -25,3 +25,18 @@ a {
     text-decoration: none; 
     color: green;
 }
+a:hover {
+    color: red;
+    text-decoration: underline;
+    background-color: white;
+}
+
+a:active {
+    color: pink;
+    background-color: green;
+}
+
+a:visited {
+    color: yellowgreen;
+    background-color: fuchsia;
+}
