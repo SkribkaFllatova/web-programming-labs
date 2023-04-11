@@ -6,13 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Скрибка Владислав, Филатова Юлия. Лабораторная 4</title>
     <link rel="stylesheet" href="main.css">
+    <script>
+        function showSum () {
+            let a = 5154;
+            let b = 7891;
+            let result = a + b; 
+            alert( ' Сумма ' + a + ' и ' + b + ' равна ' + result); 
+        }
+
+        showSum ();
+    </script>
+   
+    <style>
+        .message {
+            width: 300px;
+            height: 25px;
+            background-color: lightgreen;
+            border: 1px solid plum;
+            display: inline-block;
+            cursor: pointer;
+            border-radius: 20px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <header>
         НГТУ, ФБ, Лабораторная работа 5
     </header>
     <main>
-
+        <div class="message" onclick="showSum()">
+            Сколько будет 5154+7891?
+        </div>
+        <div class="message">
+            Узнать кто авторы страницы
+        </div>
     </main>
     <footer>
         &copy; Скрибка Владислав, Филатова Юлия, ФБИ-11, 2 курс, 20
