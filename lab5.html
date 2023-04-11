@@ -51,6 +51,13 @@
             let result = a / b; 
             alert( ' Деление ' + a + ' и ' + b + ' равна ' +  result);
         }
+        function chanOutput(buttonNum, backColor, textColor, border){
+            let output = document.getElementById('output')
+            output.innerHTML = 'Нажата кнопка ' + buttonNum
+            output.style.backgroundColor = backColor;   
+            output.style.color = textColor
+            output.style.border = border
+        }
     </script>
    
     <style>
@@ -63,6 +70,11 @@
             cursor: pointer;
             border-radius: 20px;
             text-align: center;
+        }
+        #output {
+            border: 1px solid;
+            width: 300px;
+            height: 40px;
         }
     </style>
 </head>
@@ -88,6 +100,14 @@
         <div class="message" onclick="showDivision()">
             Найти деление
         </div>
+        <div>
+            <input type="button" value="Кнопка 1" onclick="chanOutput(1, 'red', 'yellow', 'solid')">
+            <input type="button" value="Кнопка 2" onclick="chanOutput(2,'black', 'lime', 'dashed')">
+            <input type="button" value="Кнопка 3" onclick="chanOutput(3, 'green','orange','groove')">
+            <input type="button" value="Кнопка 4" onclick="chanOutput(4, 'pink', 'blue','outset')">
+        </div>
+
+        <div id = "output"></div>
     </main>
     <footer onclick="showAuthorDevis()">
         &copy; Скрибка Владислав, Филатова Юлия, ФБИ-11, 2 курс, 20
