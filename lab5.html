@@ -24,6 +24,33 @@
             let author = 'Автор страницы: \nСкрибка Владислав, Филатова Юлия \nПривет пользователь!';
             alert (author);
         }
+        function showDifference () {
+            let inputA = document.getElementById ('numberA');
+            let inputB = document.getElementById ('numberB');
+
+            let a = parseInt(inputA.value);
+            let b = parseInt(inputB.value);   
+            let result = a - b; 
+            alert( ' Разность ' + a + ' и ' + b + ' равна ' +  result);
+        }
+        function showProduck () {
+            let inputA = document.getElementById ('numberA');
+            let inputB = document.getElementById ('numberB');
+
+            let a = parseInt(inputA.value);
+            let b = parseInt(inputB.value);   
+            let result = a * b; 
+            alert( ' Произведение ' + a + ' и ' + b + ' равна ' +  result);
+        }
+        function showDivision () {
+            let inputA = document.getElementById ('numberA');
+            let inputB = document.getElementById ('numberB');
+
+            let a = parseInt(inputA.value);
+            let b = parseInt(inputB.value);   
+            let result = a / b; 
+            alert( ' Деление ' + a + ' и ' + b + ' равна ' +  result);
+        }
     </script>
    
     <style>
@@ -51,6 +78,15 @@
         </div>  
         <div class="message" onclick="showAuthor()">
             Узнать кто авторы страницы
+        </div>
+        <div class="message" onclick="showDifference()">
+            Найти разность чисел 
+        </div>
+        <div class="message" onclick="showProduck()">
+            Найти произведение
+        </div>
+        <div class="message" onclick="showDivision()">
+            Найти деление
         </div>
     </main>
     <footer onclick="showAuthorDevis()">
