@@ -58,6 +58,25 @@
             output.style.color = textColor
             output.style.border = border
         }
+        
+        function chanOutput1( result , backColor , textColor){
+            let output1 = document.getElementById('output1')
+            output1.innerHTML = 'Общая сумма: ' + result
+            
+            output1.style.backgroundColor = backColor;   
+            output1.style.color = textColor
+
+            inputC = document.getElementById ('numberC');
+            inputD = document.getElementById ('numberD');
+            inputF = document.getElementById ('numberF');
+            inputE = document.getElementById ('numberE');
+            
+            c = parseInt(inputC.value);
+            d = parseInt(inputD.value);
+            f = parseInt(inputF.value);
+            e = parseInt(inputE.value);
+            result = (c*100)+(d*80)+(f*150)+(e*300);
+        }
     </script>
    
     <style>
@@ -71,10 +90,27 @@
             border-radius: 20px;
             text-align: center;
         }
+        .message2{
+            width: 300px;
+            height: 320px;
+            background-color: lightblue;
+            border: 3px solid red;
+            display: inline-block;
+            border-radius: 15px;
+            text-align: left;
+            font-size: x-large;
+        }
+        
         #output {
             border: 1px solid;
             width: 300px;
             height: 40px;
+        }
+        #output1 {
+            width: 300px;
+            height: 40px;
+            background-color: lightblue;
+            border-radius: 10px;
         }
     </style>
 </head>
@@ -85,21 +121,27 @@
     <main>
         <label>Первое число: <input type="number" value="5154" id ="numberA" ></label><br>
         <label>Второе число: <input type="number" value="7891" id ="numberB" ></label><br>
+        
         <div class="message" onclick="showSum()">
             Найти сумму чисел
-        </div>  
+        </div>
+
         <div class="message" onclick="showAuthor()">
             Узнать кто авторы страницы
         </div>
+
         <div class="message" onclick="showDifference()">
             Найти разность чисел 
         </div>
+
         <div class="message" onclick="showProduck()">
             Найти произведение
         </div>
+
         <div class="message" onclick="showDivision()">
             Найти деление
         </div>
+
         <div>
             <input type="button" value="Кнопка 1" onclick="chanOutput(1, 'red', 'yellow', 'solid')">
             <input type="button" value="Кнопка 2" onclick="chanOutput(2,'black', 'lime', 'dashed')">
@@ -108,9 +150,25 @@
         </div>
 
         <div id = "output"></div>
+
+        <div class="message2">
+            Корзина товаров
+            <label>Яблоки(100 р/шт): <input type="number" value="3" id ="numberC" ></label><br>
+            <label>Груши (80 р/шт): <input type="number" value="8" id ="numberD" ></label><br>
+            <label>Апельсины (150 р/шт): <input type="number" value="4"  id ="numberE" ></label><br> 
+            <label>Дыни (300 р/шт): <input type="number" value="1" id ="numberF" ></label><br>
+                <div>
+                <input type="button" value="Рассчитать" onclick="chanOutput1('result', 'lightblue', 'black')">
+                </div> 
+        <div id = 'output1'></div>
+         </div>
+         
+         
+
+
     </main>
     <footer onclick="showAuthorDevis()">
-        &copy; Скрибка Владислав, Филатова Юлия, ФБИ-11, 2 курс, 20
+        &copy; Скрибка Владислав, Филатова Юлия, ФБИ-11, 2 курс, 2023
     </footer>
 </body>
 </html>
