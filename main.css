@@ -28,6 +28,10 @@ footer {
     font-style: italic; 
     text-align: right;
     transition: 900ms;
+    bottom: 0;
+    position: fixed;
+    width: 99%;
+    z-index: -1;
 }
 
 footer:hover {

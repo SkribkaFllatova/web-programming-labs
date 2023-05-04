@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="main.css">
     <script>
         function showSum () {
+        
             let inputA = document.getElementById ('numberA');
             let inputB = document.getElementById ('numberB');
 
@@ -77,6 +78,27 @@
             e = parseInt(inputE.value);
             result = (c*100)+(d*80)+(f*150)+(e*300);
         }
+        function func (a,d,n){
+            let f = [];
+            for (let i = 1; i < n; i++){
+                let result = a + d * (n-i);
+                f[i-1] = result
+            }
+            alert(f)
+            
+        }
+        function max (z,x,c){
+            alert(Math.max(z,x,c));
+        }
+
+        function wozwrat (n) {
+            
+            let a = (n%10);
+            let b = ((parseInt(n/10))%10)%10;
+            let c = parseInt (n/100);
+            alert (c + "," + b + "," + a);
+        }
+        
     </script>
    
     <style>
@@ -112,6 +134,26 @@
             background-color: lightblue;
             border-radius: 10px;
         }
+        .krog {
+            margin: 20px; 
+            border: 1px solid;
+            border-radius: 999px;
+            padding: 5px;
+            width: 50px;
+            height: 50px;
+            color: white;
+            text-align: center;
+            font-size: 40px;
+            position: absolute;
+            border: 3px solid red;
+        } 
+        .krog:visited {
+            display: none;
+        }
+        .krog:active {
+            display: none;
+        }
+       
     </style>
 </head>
 <body>
@@ -161,12 +203,25 @@
                 <input type="button" value="Рассчитать" onclick="chanOutput1('result', 'lightblue', 'black')">
                 </div> 
         <div id = 'output1'></div>
-         </div>
-         
-         
+        </div>
 
+        <div class="krog" style="background-color: green; top: 548px; left: 0px;">1</div>
+        <div class="krog" style="background-color: lightblue; top: 548px; left: 100px;">2</div>
+        <div class="krog" style="background-color: pink; top: 548px; left: 200px;">3</div>
+        <div class="krog" style="background-color: peru; top: 548px; left: 300px;">4</div>
+        <div class="krog" style="background-color: lightcoral; top: 548px; left: 400px;">5</div>
+        <div class="krog" style="background-color: lawngreen; top: 548px; left: 500px;">6</div>
+        <div class="krog" style="background-color: purple; top: 548px; left: 600px;">7</div>
+        <div class="krog" style="background-color: plum; top: 548px; left: 700px;">8</div>
+        <div class="krog" style="background-color: orange; top: 548px; left: 800px;">9</div>
+        <div class="krog" style="background-color: lightgreen; top: 548px; left: 900px;">10</div>
+        <div style="position: absolute; left: 400px; top: 250px; border: 1px solid;" onclick="func(100,5,5)">ZXC1</div>
+        <div style="position: absolute; left: 500px; top: 250px; border: 1px solid;" onclick="max(457,25654727,2526)">ZXC2</div>
+        <div style="position: absolute; left: 600px; top: 250px; border: 1px solid;" onclick="wozwrat(856)">ZXC3</div>
 
-    </main>
+    
+        </main>
+
     <footer onclick="showAuthorDevis()">
         &copy; Скрибка Владислав, Филатова Юлия, ФБИ-11, 2 курс, 2023
     </footer>
