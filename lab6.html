@@ -15,14 +15,43 @@
         margin: 40px auto;
         padding: 10px;
         text-align: center;
-        
     }
 
 </style>
 <script>
     let number;
+    let count = 0;
     function startGame() {
         number = (Math.random() * 100) + 1;
+        let screens = document.getElementsByClassName ('game');
+        screens [0].style.display = 'none';
+        screens [1].style.display = 'block';
+    }
+    function guess () {
+        count++;
+        let input = document.getElementById('user-number');
+        let userNumber = parseInt (input.value);
+        let message = document.getElementById('result');
+        if(userNumber > number){
+            message.innerHTML = 'Вы ввели слишком большое число';
+        }
+        else if (userNumber < number){
+            message.innerHTML = 'Вы ввели слишком маленькое число';
+        }
+        else {
+            let screens = document.getElementsByClassName ('game');
+            screens [1].style.display = 'none';
+            screens [2].style.display = 'block';
+            document.getElementById('number').innerHTML = number;
+            document.getElementById('try-count').innerHTML = count
+        }
+    }
+    function again(params){
+        let screens = document.getElementsByClassName('game');
+        count = 0;
+        screens [1].style.display = 'none';
+        screens [2].style.display = 'block';
+        number = Math.floor(Math.random() * 100) + 1;
     }
 </script>
 <body>
@@ -41,8 +70,8 @@
             <h1>Угадай число!</h1>
             <div>
                 Задумано число от 1 до 100. Угадайте, какое?<br>
-                <input type="number" value="" min="1" max="100"><br>
-                <button>Угадать</button>
+                <input type="number" value="" min="1" max="100" id="user-number"><br>
+                <button onclick="guess()">Угадать</button>
                 <div id="result"></div>
             </div>
         </div>
@@ -56,7 +85,7 @@
                 Количество попыток: <span id="try-count"></span>
             </div>
             <div>
-                <button>Сыграть еще раз</button>
+                <button onclick="again()">Сыграть еще раз</button>
             </div>
         </div>
     </main>
