@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Скрибка Владислав, Филатова Юлия.</title>
+    <link rel="stylesheet" href="main.css">
+<script>
+    function showZ1(n){
+        let a = (parseInt(n/100));
+        let b = (parseInt(n/10)%10);
+        let c = (n%10);
+        alert(b + "" + c + "" + a)
+    }
+    function showZ2(a,b){
+        let d = a
+        let f = b
+        if (d != f) {
+            d = a+b;
+            f = a*b;
+        }
+        else {
+            d = 0;
+            f = 0;
+        }     
+        alert (d + "," + f)   
+    }
+</script>
+<style>
+    .message {
+        width: 300px;
+        height: 25px;
+        background-color: lightgreen;
+        border: 1px solid plum;
+        display: inline-block;
+        cursor: pointer;
+        border-radius: 20px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+    <main>
+        <div class="message" onclick="showZ1(462)">Вычислить</div>
+        <div class="message" onclick="showZ2(45,1)">Сравнить</div>            
+    </main>
+</body>
+</html>
