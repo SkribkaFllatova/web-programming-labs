@@ -12,7 +12,6 @@
             for (let i = 0; i < 10; i++){
                 let block = document.createElement('div');
                 block.innerHTML = 'Блок №' + (i+1) + ': ' + (2 * i**2);
-
                 blocks.appendChild(block);
             }
         }
@@ -35,6 +34,12 @@
             document.getElementById('detail').innerHTML = 'Среднее значение: ' + average;
         }
     </script>
+    <style>
+        .z1 {
+            opacity: 50%;
+        }
+        
+    </style>
 </head>
 <body>
     <header>
@@ -47,6 +52,9 @@
         <button onclick="showExchange()">Курс доллара</button>
         <table border="1"id="dollar-exchange"></table>
         <div id="detail"></div>
+
+        <button onclick="addTransparentBlocks()" class="z1">Создать полупрозрачные блоки</button>
+        <div id="transparent-blocks"></div>
     </main>
 
     <footer>
