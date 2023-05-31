@@ -13,12 +13,24 @@
         НГТУ, ФБ, Лабораторная работа 8
     </header>
     <main>
+        <p style="font-size: 15pt;"><b>Задание с временем</b></p>
         <div id="current-dateRU"></div>
         <div id="current-dateZA"></div>
         <div id="current-dateCA"></div>
         <div id="current-datePA"></div>
         <div id="current-dateEE"></div>
         <div id="current-dateBE"></div>
+        <p style="font-size: 15pt;"><b> Задание с датами</b></p>
+        <div>
+            <label>Дата рождения: <input type="date"></label>
+        </div>
+        <div>
+            <button onclick="showDaysCount()">Показать число дней</button>
+        </div>
+        <div>
+            <button id="click">Очистить </button>
+        </div>
+        <div id="day"></div>
     </main>
     
     <footer onclick="showAuthorDevis()">
