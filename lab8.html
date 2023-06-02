@@ -11,6 +11,7 @@
 <body onload="showDate()">
     <header onclick="showAuthor()">
         НГТУ, ФБ, Лабораторная работа 8
+        <div id="time" style="position: absolute; top: 5px; right: 5px;">00:00:00</div>
     </header>
     <main>
         <p style="font-size: 15pt;"><b>Задание с временем</b></p>
@@ -28,7 +29,7 @@
             <button onclick="showDaysCount()">Показать число дней</button>
         </div>
         <div>
-            <button id="click">Очистить </button>
+            <button id="clear">Очистить </button>
         </div>
         <div id="day"></div>
     </main>
