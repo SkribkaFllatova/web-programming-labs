@@ -1,0 +1,15 @@
+// находим элементы на странице
+const dateInput = document.getElementById('date-input');
+const addButton = document.getElementById('add-button');
+const clearButton = document.getElementById('clear-button');
+
+// добавляем обработчик клика на кнопку "Добавить дату"
+addButton.addEventListener('click', () => {
+  const date = dateInput.value; // сохраняем введенную дату в переменной
+  console.log(`Дата "${date}" добавлена!`); // выводим введенную дату в консоль
+});
+
+// добавляем обработчик клика на кнопку "Очистить дату"
+clearButton.addEventListener('click', () => {
+  dateInput.value = ''; // очищаем поле ввода даты
+});

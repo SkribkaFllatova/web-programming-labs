@@ -23,13 +23,13 @@
         <div id="current-dateBE"></div>
         <p style="font-size: 15pt;"><b> Задание с датами</b></p>
         <div>
-            <label>Дата рождения: <input type="date"></label>
+            <label>Дата рождения: <input type="date" id="date-input"></label>
         </div>
         <div>
             <button onclick="showDaysCount()">Показать число дней</button>
         </div>
         <div>
-            <button id="clear">Очистить </button>
+            <button onclick="clearInput()">Удалить значения</button>
         </div>
         <div id="day"></div>
     </main>

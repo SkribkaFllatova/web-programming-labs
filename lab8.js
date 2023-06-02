@@ -33,6 +33,11 @@ function showDaysCount () {
     
 }
 
+function clearInput() {
+    document.getElementById("date-input").value = "";
+    document.getElementById("day").innerHTML = "";
+}
+
 function showTime () {
     let today = new Date(); 
     let currentTime = today.toLocaleTimeString("ru-RU");
