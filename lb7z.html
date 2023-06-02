@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // Задаем массив чисел 
+        const numbers = [5, 2, 10, 1, 8]; 
+ 
+        // Находим минимальное значение 
+        const min = Math.min(...numbers); 
+
+        // Выводим результат на сайт 
+        document.write(`Минимальное значение: ${min}`); 
+
+
+
+        function showZ1 () {
+        
+        let X = document.getElementById ('numberX');
+        let a = parseFloat(X.value);
+        
+        if (a <=0){
+            alert (a * -1)
+        }
+        else if ((0< a)&(a<2)){
+            alert (a*a)
+        }
+        else (a=>2)(
+            alert ('4')
+        )
+
+    }
+    function showZ2_1 () {
+        let N = document.getElementById('numberN')
+        let n = parseInt(N.value)
+        if (n>=0) {
+            alert(showZ2(n))
+        }
+        else {
+            alert ('error')
+        }
+
+   }
+
+    function showZ2 (n) {
+        if (n<=1) {
+            return 1
+        }
+        else {
+            return n * showZ2(n-1)
+        }
+    }
+    
+    
+    </script>
+    <style>
+         .message {
+            width: 300px;
+            height: 25px;
+            background-color: lightgreen;
+            border: 1px solid plum;
+            display: inline-block;
+            cursor: pointer;
+            border-radius: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <main>
+
+        <label>Первое число: <input type="number" id ="numberX" step = "0.1" ></label><br>
+        <label>Второе число: <input type="number" id ="numberN"></label><br>
+        
+        <div class="message" onclick="showZ1()">
+            Найти значения функции
+        </div>
+        <div class="message" onclick="showZ2(5)">
+            Найти факториал 
+        </div>
+    </main>
+    
+</body>
+</html>
